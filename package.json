@@ -1,0 +1,20 @@
+{
+  "name": "web-scrapping-osmosis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "nodemon": "^1.19.4",
+    "osmosis": "^1.1.10",
+    "puppeteer": "^2.0.0"
+  }
+}
