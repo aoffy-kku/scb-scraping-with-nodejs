@@ -7,7 +7,7 @@ const scbUrl = "https://www.scbeasy.com/v1.4/site/presignon/index.asp";
 
 const main = async () => {
   try {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
     await page.goto(scbUrl);
     await page.type("input[name=LOGIN]", process.env.LOGIN, { delay: 10 });
@@ -36,8 +36,8 @@ const main = async () => {
     const keys = [
       "date",
       "time",
-      "order",
-      "from",
+      "code",
+      "channel",
       "transfer",
       "deposit",
       "detail"
