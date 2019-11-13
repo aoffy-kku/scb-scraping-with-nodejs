@@ -14,14 +14,13 @@ const main = async () => {
     await page.type("input[name=PASSWD]", process.env.PASSWORD, { delay: 10 });
     await page.click("#lgin");
     console.log("LOGIN")
-    await page.waitFor(2000);
+    await page.waitFor("#form1 > table:nth-child(7) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table:nth-child(3) > tbody > tr:nth-child(2) > td.nav-width > table > tbody > tr:nth-child(2) > td > a");
     // const cookies = await page.cookies()
     // console.log(cookies)
     await page.click(
       "#form1 > table:nth-child(7) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table:nth-child(3) > tbody > tr:nth-child(2) > td.nav-width > table > tbody > tr:nth-child(2) > td > a"
     );
     console.log("GO TO MY ACCOUNT")
-    await page.waitFor(2000);
     await page.waitForSelector(
       "#DataProcess_SaCaGridView_SaCaView_LinkButton_0"
     );
@@ -30,7 +29,7 @@ const main = async () => {
     await page.waitForSelector("#DataProcess_Link2");
     await page.click("#DataProcess_Link2");
     console.log("VIEW MY TODAY's STATEMENT")
-    await page.waitFor(2000);
+    await page.waitForSelector("td.bd_th_blk11_rtlt10_tpbt5");
     const content = await page.content();
     const array = [];
     const datas = [];
